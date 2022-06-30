@@ -10,7 +10,7 @@
 
 import os
 from tkinter import *
-from tkinter import messsagebox
+from tkinter import messagebox
 import tkinter as tk
 import sqlite3
 
