@@ -1,7 +1,7 @@
 import webbrowser
 from tkinter import *
 
-webbrowser.open_new_tab('index.html')
+
 
 
 def Submit():#function called on inside Button()
@@ -20,6 +20,7 @@ def Submit():#function called on inside Button()
     #writing code into file
     f.write(html_template)#write allows for user to overwrite any existing content
     f.close()
+    webbrowser.open_new_tab('index.html')
 
 
 
