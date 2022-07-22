@@ -90,13 +90,16 @@ class ParentWindow(Frame):
         for i in source_files:
             #we are saying  move the files represented by i to their new destination
             time=datetime.now()
-            modi=os.path.getmtime(i)
-            timee = time - modi
-            if (timee > datetime.timedelta(days=1)):
+
+            modi=os.path.getmtime(source + '/' + i)
+            modtime = datetime.fromtimestamp(modi)
+            twentyfourhrs = time - timedelta(hours = 24)
+            if (modtime < twentyfourhrs):
                 print('old')
             else:
                 print('new')
-                shutil.move(source+i, destination)
+                shutil.move(source + '/' + i, destination)
+                
 
 
 
